@@ -1,0 +1,15 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Find your font on Google Fonts */
+    text-align: center;
+    padding: 50px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#quote-container {
+    padding: 30px;
+    border-radius: 10px; 
+    max-width: 600px;
+}
