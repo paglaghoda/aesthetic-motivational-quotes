@@ -1,13 +1,8 @@
-body {
-    font-family: 'Poppins', sans-serif; /* Find your font on Google Fonts */
-    text-align: center;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#quote-container {
-    border-radius: 10px; 
-    max-width: 600px;
+h1 {
+    font-family: Helvetica, sans-serif; 
+    color: #FBEAEB;
+    background-color: #2F3C7E;
+    font-size: 36px;
+    text-align: center; 
+    padding: 20px; 
 }
