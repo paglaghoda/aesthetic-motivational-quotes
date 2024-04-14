@@ -1,32 +1,21 @@
 const quoteElement = document.getElementById('quote');
-const body = document.body; // For background color changes
+
+// Sample quotes (you'll ideally fetch these from an external source)
+const quotes = [
+    "The journey of a thousand miles begins with a single step.",
+    "Believe you can and you're halfway there.",
+    "The only way to do great work is to love what you do."
+];
 
 function displayNewQuote() {
-    fetch("https://type.fit/api/quotes")
-        .then(response => response.json())
-        .then(data => {
-            const randomIndex = Math.floor(Math.random() * data.length);
-            const selectedQuote = data[randomIndex];
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    quoteElement.textContent = quotes[randomIndex];
 
-            quoteElement.textContent = selectedQuote.text;
-            // You'll likely want to add the author as well
-
-            // Change background color (modify as desired)
-            body.style.backgroundColor = getRandomColor(); 
-        });
+    // Add code to change background color here (see below)
 }
 
-function getRandomColor() {
-    // Simple random color for now - explore palettes if you want
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
+// Call initially on page load
+displayNewQuote(); 
 
-// Initial call
-displayNewQuote();
-
-// ... (You might want to replace the refresh with a button)
+// Call on refresh (you might want a button instead for a 'fun project')
+window.addEventListener('load', displayNewQuote);
